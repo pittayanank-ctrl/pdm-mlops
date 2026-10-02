@@ -1,0 +1,16 @@
+{
+  "source": "data/bad/missing_column",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "vibration",
+      "check": "column missing",
+      "count": 1,
+      "examples": [
+        "vibration"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:32.642541+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "data/bad/too_many_nulls",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "telemetry",
+      "check": "sensor null fraction > 5%",
+      "count": 1,
+      "examples": [
+        "False"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:36.110790+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "source": "data/bad/unknown_machine",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "machineID",
+      "check": "in_range(1, 100)",
+      "count": 5,
+      "examples": [
+        "999",
+        "999",
+        "999",
+        "999",
+        "999"
+      ]
+    },
+    {
+      "table": "telemetry",
+      "column": "machineID",
+      "check": "unknown machine (not in machines table)",
+      "count": 1,
+      "examples": [
+        "999"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:04:19.969931+00:00"
+}
