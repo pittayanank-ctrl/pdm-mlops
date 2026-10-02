@@ -1,0 +1,33 @@
+{
+  "source": "data/bad/duplicate_rows",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "datetime",
+      "check": "multiple_fields_uniqueness",
+      "count": 100,
+      "examples": [
+        "2015-01-02 19:00:00",
+        "2015-01-02 09:00:00",
+        "2015-01-02 10:00:00",
+        "2015-01-02 11:00:00",
+        "2015-01-02 12:00:00"
+      ]
+    },
+    {
+      "table": "telemetry",
+      "column": "machineID",
+      "check": "multiple_fields_uniqueness",
+      "count": 100,
+      "examples": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:31.428363+00:00"
+}

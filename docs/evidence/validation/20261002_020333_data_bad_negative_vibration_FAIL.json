@@ -1,0 +1,20 @@
+{
+  "source": "data/bad/negative_vibration",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "vibration",
+      "check": "in_range(0.0, 150.0)",
+      "count": 25,
+      "examples": [
+        "-5.0",
+        "-5.0",
+        "-5.0",
+        "-5.0",
+        "-5.0"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:33.861728+00:00"
+}

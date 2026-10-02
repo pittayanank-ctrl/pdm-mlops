@@ -1,0 +1,20 @@
+{
+  "source": "data/bad/out_of_range_rotate",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "rotate",
+      "check": "in_range(0.0, 1000.0)",
+      "count": 10,
+      "examples": [
+        "5000.0",
+        "5000.0",
+        "5000.0",
+        "5000.0",
+        "5000.0"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:34.987112+00:00"
+}

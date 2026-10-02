@@ -1,0 +1,25 @@
+{
+  "source": "data/bad/wrong_type",
+  "passed": false,
+  "issues": [
+    {
+      "table": "telemetry",
+      "column": "volt",
+      "check": "dtype('float64')",
+      "count": 1,
+      "examples": [
+        "object"
+      ]
+    },
+    {
+      "table": "telemetry",
+      "column": "volt",
+      "check": "in_range(50.0, 300.0)",
+      "count": 1,
+      "examples": [
+        "TypeError(\"'>=' not supported between instances of 'str' and 'float'\")"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-01T19:03:38.388269+00:00"
+}
