@@ -46,5 +46,5 @@
 | คนที่ 4 | Claude | โค้ดใน PR03, PR04, PR07 (schema/validate, cleaning, bad_data, test_validation) และช่วยอธิบายขั้นตอน git/PR, เขียนคำอธิบาย PR | อ่านและอธิบายโค้ดได้, รัน pytest/ruff, รัน bad_data และ validate เองกับข้อมูลเสียทุกเคส, ตรวจรายงานผล validation (PR26) |
 | คนที่ 5 | | | |
 | คนที่ 6 | | | |
-| คนที่ 7 | | | |
+| คนที่ 7 | Gemini | ช่วยตอนแคปภาพ Grafana, Prometheus, Evidently report การ commit, push | ลำดับคำสั่ง Git และตรวจสอบความถูกต้องของไฟล์รูปภาพ |
 | คนที่ 8 | Claude | ช่วยร่างคำอธิบาย PR (PR08, PR22, PR23), อธิบายขั้นตอน git/CI และช่วยแก้ปัญหาติดตั้ง Python/venv | อ่าน ci.yml ทุก job, รัน pytest/ruff เอง, ถ่ายภาพ CI ทั้งตอนเขียวและแดงเอง, ตรวจว่า README ตรงกับ Makefile |
