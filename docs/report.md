@@ -302,7 +302,17 @@ GitHub Actions (`.github/workflows/ci.yml`) มี 4 job:
 | model-quality | รัน pipeline เต็ม ถ้า gate ไม่ผ่าน job จะพัง และเขียนตารางผล gate ลง Job Summary |
 | docker-build | build image สำเร็จ |
 
-[ภาพ: CI ผ่านครบ 4 job / CI ไม่ผ่านแยกทีละด้าน 3 ภาพ]
+![CI ผ่านครบ 4 job และ gate PASSED](evidence/screenshots/ci_pass.png)
+
+![CI ไม่ผ่าน: โค้ด](evidence/screenshots/ci_fail_code.png)
+CI จับ import ที่ไม่ได้ใช้ (F401) ได้ ภาพนี้มาจาก CI ของ `main` ตอนที่สมาชิกแก้ไฟล์ผ่านหน้าเว็บจน commit ลง main โดยตรงระหว่างทดสอบ CI (ก่อนเปลี่ยน repo เป็น public ซึ่งตอนนั้นกฎป้องกัน main ยังไม่ถูกบังคับใช้) ทีมแก้กลับด้วย PR `fix: revert unused import committed directly to main`
+
+![CI ไม่ผ่าน: ข้อมูล](evidence/screenshots/ci_fail_data.png)
+
+![CI ไม่ผ่าน: โมเดล (gate REJECTED)](evidence/screenshots/ci_fail_model.png)
+![log ของ gate ที่ปฏิเสธโมเดล](evidence/screenshots/ci_fail_model_log.png)
+
+![merge ถูกบล็อกเมื่อ CI ไม่ผ่าน](evidence/screenshots/ci_blocked.png)
 
 ## 11. Pipeline และ Git
 
