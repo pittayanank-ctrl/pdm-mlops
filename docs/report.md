@@ -72,6 +72,9 @@ AI Project Canvas ฉบับเต็มอยู่ที่ [ai_project_canv
 - `seed = 42`
 - เวอร์ชันไลบรารีล็อกไว้ใน `requirements.lock`
 
+
+![data_version ตรงกันทุกครั้งที่รัน](evidence/screenshots/data_version.png)
+
 **ข้อจำกัด:** ข้อมูลเป็นข้อมูลสังเคราะห์และมีเพียง 1 ปี รูปแบบการเสียจึงชัดเจนกว่าโรงงานจริงมาก ผลในหัวข้อ 6 จึงเป็นค่าที่ดีเกินจริงสำหรับการใช้งานจริง
 
 ## 4. Schema และการตรวจจับความผิดปกติ
@@ -109,7 +112,7 @@ Schema เขียนด้วย Pandera (`src/pdm/validation/schema.py`) ต�
 1. Pandera ข้ามค่า null ก่อนรัน check ของคอลัมน์ที่ `nullable=True` จึงต้องย้ายการเช็กสัดส่วน null ไปตรวจระดับ DataFrame
 2. `read_csv` แปลง "N/A" เป็น NaN อัตโนมัติ ข้อมูลเสียแบบนี้จึงหลุดการเช็กชนิดข้อมูล
 
-[ภาพ: Prefect flow run ที่หยุดตรง validate]
+![pipeline หยุดที่ validate เมื่อเจอข้อมูลเสีย](evidence/screenshots/validate_stop.png)
 
 **การจัดการค่าหายและ outlier** (`cleaning.py`):
 
@@ -176,7 +179,11 @@ Schema เขียนด้วย Pandera (`src/pdm/validation/schema.py`) ต�
 
 error ก่อนหน้าเป็นสัญญาณหลัก ส่วนเซนเซอร์ช่วยระบุว่าชิ้นส่วนไหนจะเสีย
 
-[ภาพ: PR curve ของ 4 โมเดล จาก `docs/evidence/experiments/*/pr_curve.png`]
+![MLflow compare runs](evidence/screenshots/mlflow_compare.png)
+
+| Rule baseline | Logistic Regression | Random Forest | XGBoost |
+|---|---|---|---|
+| ![](evidence/experiments/rule_baseline/pr_curve.png) | ![](evidence/experiments/logreg/pr_curve.png) | ![](evidence/experiments/random_forest/pr_curve.png) | ![](evidence/experiments/xgboost/pr_curve.png) |
 
 ## 7. Experiment Tracking และ Model Registry
 
@@ -297,7 +304,17 @@ GitHub Actions (`.github/workflows/ci.yml`) มี 4 job:
 | model-quality | รัน pipeline เต็ม ถ้า gate ไม่ผ่าน job จะพัง และเขียนตารางผล gate ลง Job Summary |
 | docker-build | build image สำเร็จ |
 
-[ภาพ: CI ผ่านครบ 4 job / CI ไม่ผ่านแยกทีละด้าน 3 ภาพ]
+![CI ผ่านครบ 4 job และ gate PASSED](evidence/screenshots/ci_pass.png)
+
+![CI ไม่ผ่าน: โค้ด](evidence/screenshots/ci_fail_code.png)
+CI จับ import ที่ไม่ได้ใช้ (F401) ได้ ภาพนี้มาจาก CI ของ `main` ตอนที่สมาชิกแก้ไฟล์ผ่านหน้าเว็บจน commit ลง main โดยตรงระหว่างทดสอบ CI (ก่อนเปลี่ยน repo เป็น public ซึ่งตอนนั้นกฎป้องกัน main ยังไม่ถูกบังคับใช้) ทีมแก้กลับด้วย PR `fix: revert unused import committed directly to main`
+
+![CI ไม่ผ่าน: ข้อมูล](evidence/screenshots/ci_fail_data.png)
+
+![CI ไม่ผ่าน: โมเดล (gate REJECTED)](evidence/screenshots/ci_fail_model.png)
+![log ของ gate ที่ปฏิเสธโมเดล](evidence/screenshots/ci_fail_model_log.png)
+
+![merge ถูกบล็อกเมื่อ CI ไม่ผ่าน](evidence/screenshots/ci_blocked.png)
 
 ## 11. Pipeline และ Git
 
