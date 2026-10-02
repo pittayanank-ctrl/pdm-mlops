@@ -1,0 +1,31 @@
+# Small synthetic dataset for CI and offline demos (same schema as Azure PdM).
+# Only keys listed here override configs/params.yaml.
+
+data:
+  source: sample
+  raw_dir: data/sample/raw
+  processed_dir: data/sample/processed
+  sample:
+    machines: 20
+    start: "2015-01-01"
+    days: 120
+    seed: 7
+
+split:
+  train: ["2015-01-01", "2015-03-10"]
+  val:   ["2015-03-10", "2015-04-05"]
+  test:  ["2015-04-05", "2015-05-02"]
+
+experiments:
+  - name: rule_baseline
+    model: rule
+    params: {feature: vibration_mean_24h}
+  - name: logreg
+    model: logreg
+    params: {C: 1.0}
+  - name: xgboost
+    model: xgboost
+    params: {n_estimators: 150, max_depth: 4, learning_rate: 0.1, subsample: 0.8, colsample_bytree: 0.8}
+
+monitoring:
+  reference_sample_rows: 5000
