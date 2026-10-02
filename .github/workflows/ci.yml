@@ -49,3 +49,40 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: validation-reports, path: reports/validation}
+
+  # 3) model quality: run the whole pipeline; fail if the candidate does not pass the gate
+  model-quality:
+    runs-on: ubuntu-latest
+    needs: [code-quality, data-validation]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt -c requirements.lock
+      - name: Train + evaluate + gate
+        env: {GIT_COMMIT: "${{ github.sha }}"}
+        run: python -m pdm.pipelines.training_flow --fail-on-reject
+      - name: Gate summary
+        if: always()
+        run: |
+          python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          p = pathlib.Path("reports/gate/latest.json")
+          if p.exists():
+              r = json.loads(p.read_text())
+              print(f"## Model gate: {'PASSED' if r['passed'] else 'REJECTED'}\n")
+              print("| check | value | rule | result |\n|---|---|---|---|")
+              for c in r["checks"]:
+                  print(f"| {c['name']} | {c['value']:.4f} | {c['rule']} | {'pass' if c['passed'] else 'FAIL'} |")
+          EOF
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: model-reports, path: reports/}
+
+  # 4) the image builds (CD: this is what docker compose runs)
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: [code-quality]
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t pdm-mlops:${{ github.sha }} .
