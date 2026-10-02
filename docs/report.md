@@ -112,7 +112,7 @@ Schema เขียนด้วย Pandera (`src/pdm/validation/schema.py`) ต�
 1. Pandera ข้ามค่า null ก่อนรัน check ของคอลัมน์ที่ `nullable=True` จึงต้องย้ายการเช็กสัดส่วน null ไปตรวจระดับ DataFrame
 2. `read_csv` แปลง "N/A" เป็น NaN อัตโนมัติ ข้อมูลเสียแบบนี้จึงหลุดการเช็กชนิดข้อมูล
 
-[ภาพ: Prefect flow run ที่หยุดตรง validate]
+![pipeline หยุดที่ validate เมื่อเจอข้อมูลเสีย](evidence/screenshots/validate_stop.png)
 
 **การจัดการค่าหายและ outlier** (`cleaning.py`):
 
