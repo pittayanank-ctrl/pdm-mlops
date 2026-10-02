@@ -1,0 +1,46 @@
+# System health + prediction-quality proxies. Thresholds mirror configs/params.yaml (serving.slo).
+# Firing alerts: http://localhost:9090/alerts and the Grafana dashboard.
+groups:
+  - name: pdm-api
+    rules:
+      - alert: ApiDown
+        expr: up{job="pdm-api"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations:
+          summary: "Prediction API is not reachable"
+
+      - alert: ModelNotLoaded
+        expr: pdm_model_loaded == 0
+        for: 2m
+        labels: {severity: critical}
+        annotations:
+          summary: "API is up but has no champion model"
+
+      - alert: LatencySLOBreached
+        expr: >
+          histogram_quantile(0.95,
+            sum(rate(pdm_request_latency_seconds_bucket{endpoint="/predict"}[5m])) by (le)) > 0.1
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "p95 /predict latency above the 100 ms SLO"
+
+      - alert: ErrorRateSLOBreached
+        expr: >
+          sum(rate(pdm_requests_total{status=~"5.."}[5m]))
+            / clamp_min(sum(rate(pdm_requests_total[5m])), 1e-9) > 0.01
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "More than 1% of requests fail with 5xx"
+
+      - alert: PredictedFailureRateShift
+        # normal share of "will fail" predictions is ~5%; a jump means inputs or the model changed
+        expr: >
+          sum(increase(pdm_predictions_total{will_fail="true"}[1h]))
+            / clamp_min(sum(increase(pdm_predictions_total[1h])), 1) > 0.3
+        for: 10m
+        labels: {severity: warning}
+        annotations:
+          summary: "Share of predicted failures > 30% in the last hour (possible data drift) - run the drift report"
