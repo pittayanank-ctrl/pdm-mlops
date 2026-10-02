@@ -1,0 +1,192 @@
+{
+  "name": "none_drift",
+  "rows": 97900,
+  "predicted_positive_rate": 0.0189,
+  "thresholds": {
+    "psi_threshold": 0.2,
+    "drift_share_threshold": 0.3,
+    "min_recall": 0.7
+  },
+  "data_drift": {
+    "drift_share": 0.0,
+    "data_drift": false,
+    "drifted_features": [],
+    "features": [
+      {
+        "feature": "days_since_comp2",
+        "psi": 0.1715,
+        "ks_pvalue": 6.393199515735551e-125,
+        "drifted": false
+      },
+      {
+        "feature": "days_since_comp3",
+        "psi": 0.1624,
+        "ks_pvalue": 3.348832542690943e-150,
+        "drifted": false
+      },
+      {
+        "feature": "days_since_comp1",
+        "psi": 0.1562,
+        "ks_pvalue": 8.417321766893576e-126,
+        "drifted": false
+      },
+      {
+        "feature": "days_since_comp4",
+        "psi": 0.1209,
+        "ks_pvalue": 8.490646230625852e-147,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_mean_24h",
+        "psi": 0.0013,
+        "ks_pvalue": 0.017299166164938526,
+        "drifted": false
+      },
+      {
+        "feature": "volt_std_24h",
+        "psi": 0.001,
+        "ks_pvalue": 0.18416863226950952,
+        "drifted": false
+      },
+      {
+        "feature": "vibration_std_24h",
+        "psi": 0.001,
+        "ks_pvalue": 0.009505824422423209,
+        "drifted": false
+      },
+      {
+        "feature": "vibration_mean_3h",
+        "psi": 0.0009,
+        "ks_pvalue": 0.15178970903185585,
+        "drifted": false
+      },
+      {
+        "feature": "pressure_mean_24h",
+        "psi": 0.0009,
+        "ks_pvalue": 0.00864723570977707,
+        "drifted": false
+      },
+      {
+        "feature": "vibration_mean_24h",
+        "psi": 0.0008,
+        "ks_pvalue": 0.005183128027739704,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_std_3h",
+        "psi": 0.0007,
+        "ks_pvalue": 0.3928151313484862,
+        "drifted": false
+      },
+      {
+        "feature": "pressure_mean_3h",
+        "psi": 0.0007,
+        "ks_pvalue": 0.03655103351859146,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_std_24h",
+        "psi": 0.0007,
+        "ks_pvalue": 0.026662088457205857,
+        "drifted": false
+      },
+      {
+        "feature": "volt_mean_3h",
+        "psi": 0.0006,
+        "ks_pvalue": 0.4285292878309668,
+        "drifted": false
+      },
+      {
+        "feature": "pressure_std_24h",
+        "psi": 0.0006,
+        "ks_pvalue": 0.33890686523658353,
+        "drifted": false
+      },
+      {
+        "feature": "volt_std_3h",
+        "psi": 0.0006,
+        "ks_pvalue": 0.0637887794789943,
+        "drifted": false
+      },
+      {
+        "feature": "volt_mean_24h",
+        "psi": 0.0005,
+        "ks_pvalue": 0.46826840835556693,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_mean_3h",
+        "psi": 0.0005,
+        "ks_pvalue": 0.4244366987352487,
+        "drifted": false
+      },
+      {
+        "feature": "pressure_std_3h",
+        "psi": 0.0004,
+        "ks_pvalue": 0.18233259743474317,
+        "drifted": false
+      },
+      {
+        "feature": "vibration_std_3h",
+        "psi": 0.0003,
+        "ks_pvalue": 0.4908487260023766,
+        "drifted": false
+      },
+      {
+        "feature": "age",
+        "psi": 0.0003,
+        "ks_pvalue": 0.5968760867005583,
+        "drifted": false
+      },
+      {
+        "feature": "model",
+        "psi": 0.0001,
+        "ks_pvalue": NaN,
+        "drifted": false
+      },
+      {
+        "feature": "error1_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 0.9999999999475734,
+        "drifted": false
+      },
+      {
+        "feature": "error2_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      },
+      {
+        "feature": "error3_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      },
+      {
+        "feature": "error4_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 0.9997552443753017,
+        "drifted": false
+      },
+      {
+        "feature": "error5_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      }
+    ]
+  },
+  "performance": {
+    "n_labelled": 97900,
+    "positives": 1802,
+    "recall": 0.9983351831298557,
+    "precision": 0.9708580679978414,
+    "pr_auc": 0.9993798644821421
+  },
+  "concept_drift": false,
+  "decision": {
+    "status": "no_drift",
+    "retrain": false,
+    "reason": "nothing to do (weekly scheduled retrain still applies)"
+  }
+}

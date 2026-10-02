@@ -1,0 +1,198 @@
+{
+  "name": "live",
+  "rows": 300,
+  "predicted_positive_rate": 0.0567,
+  "thresholds": {
+    "psi_threshold": 0.2,
+    "drift_share_threshold": 0.3,
+    "min_recall": 0.7
+  },
+  "data_drift": {
+    "drift_share": 0.407,
+    "data_drift": true,
+    "drifted_features": [
+      "volt_mean_24h",
+      "vibration_mean_24h",
+      "pressure_mean_24h",
+      "vibration_mean_3h",
+      "pressure_mean_3h",
+      "volt_mean_3h",
+      "pressure_std_24h",
+      "vibration_std_24h",
+      "volt_std_24h",
+      "pressure_std_3h",
+      "days_since_comp2"
+    ],
+    "features": [
+      {
+        "feature": "volt_mean_24h",
+        "psi": 8.2831,
+        "ks_pvalue": 0.0,
+        "drifted": true
+      },
+      {
+        "feature": "vibration_mean_24h",
+        "psi": 8.2831,
+        "ks_pvalue": 0.0,
+        "drifted": true
+      },
+      {
+        "feature": "pressure_mean_24h",
+        "psi": 8.2831,
+        "ks_pvalue": 0.0,
+        "drifted": true
+      },
+      {
+        "feature": "vibration_mean_3h",
+        "psi": 4.7672,
+        "ks_pvalue": 7.041847909302153e-190,
+        "drifted": true
+      },
+      {
+        "feature": "pressure_mean_3h",
+        "psi": 4.2644,
+        "ks_pvalue": 1.6114814227487055e-160,
+        "drifted": true
+      },
+      {
+        "feature": "volt_mean_3h",
+        "psi": 3.5308,
+        "ks_pvalue": 5.761774430421566e-127,
+        "drifted": true
+      },
+      {
+        "feature": "pressure_std_24h",
+        "psi": 2.6525,
+        "ks_pvalue": 8.275456428848041e-78,
+        "drifted": true
+      },
+      {
+        "feature": "vibration_std_24h",
+        "psi": 1.2608,
+        "ks_pvalue": 1.3166658251799706e-65,
+        "drifted": true
+      },
+      {
+        "feature": "volt_std_24h",
+        "psi": 0.3359,
+        "ks_pvalue": 6.546092081757438e-17,
+        "drifted": true
+      },
+      {
+        "feature": "pressure_std_3h",
+        "psi": 0.2212,
+        "ks_pvalue": 1.886910617867506e-08,
+        "drifted": true
+      },
+      {
+        "feature": "days_since_comp2",
+        "psi": 0.2033,
+        "ks_pvalue": 0.01910015598622119,
+        "drifted": true
+      },
+      {
+        "feature": "days_since_comp1",
+        "psi": 0.1849,
+        "ks_pvalue": 0.0046991874007068675,
+        "drifted": false
+      },
+      {
+        "feature": "days_since_comp4",
+        "psi": 0.1722,
+        "ks_pvalue": 0.00037896032071506,
+        "drifted": false
+      },
+      {
+        "feature": "days_since_comp3",
+        "psi": 0.164,
+        "ks_pvalue": 0.0035610311974615077,
+        "drifted": false
+      },
+      {
+        "feature": "vibration_std_3h",
+        "psi": 0.1454,
+        "ks_pvalue": 2.62383976764234e-06,
+        "drifted": false
+      },
+      {
+        "feature": "volt_std_3h",
+        "psi": 0.0807,
+        "ks_pvalue": 0.003524751604555496,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_std_24h",
+        "psi": 0.0423,
+        "ks_pvalue": 0.4434232952514937,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_std_3h",
+        "psi": 0.0394,
+        "ks_pvalue": 0.5054218581237755,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_mean_24h",
+        "psi": 0.0383,
+        "ks_pvalue": 0.08077021214586633,
+        "drifted": false
+      },
+      {
+        "feature": "age",
+        "psi": 0.0377,
+        "ks_pvalue": 0.9773770986407493,
+        "drifted": false
+      },
+      {
+        "feature": "rotate_mean_3h",
+        "psi": 0.0089,
+        "ks_pvalue": 0.9119669967058557,
+        "drifted": false
+      },
+      {
+        "feature": "model",
+        "psi": 0.0022,
+        "ks_pvalue": NaN,
+        "drifted": false
+      },
+      {
+        "feature": "error1_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      },
+      {
+        "feature": "error3_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      },
+      {
+        "feature": "error2_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 0.9999999999999998,
+        "drifted": false
+      },
+      {
+        "feature": "error4_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      },
+      {
+        "feature": "error5_count_24h",
+        "psi": 0.0,
+        "ks_pvalue": 1.0,
+        "drifted": false
+      }
+    ]
+  },
+  "performance": null,
+  "concept_drift": false,
+  "decision": {
+    "status": "data_drift",
+    "retrain": true,
+    "reason": "input distribution shifted: model is extrapolating"
+  }
+}
