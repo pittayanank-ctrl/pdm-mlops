@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import copy
 import os
 from functools import cache
