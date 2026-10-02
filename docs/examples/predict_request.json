@@ -1,0 +1,187 @@
+{
+  "machine_id": 16,
+  "model": "model4",
+  "age": 16,
+  "telemetry": [
+    {
+      "datetime": "2015-04-23T01:00:00",
+      "volt": 171.3638,
+      "rotate": 413.2419,
+      "pressure": 96.1656,
+      "vibration": 50.4626
+    },
+    {
+      "datetime": "2015-04-23T02:00:00",
+      "volt": 151.2243,
+      "rotate": 448.1031,
+      "pressure": 101.9014,
+      "vibration": 47.3018
+    },
+    {
+      "datetime": "2015-04-23T03:00:00",
+      "volt": 132.0936,
+      "rotate": 410.3835,
+      "pressure": 113.3968,
+      "vibration": 44.6126
+    },
+    {
+      "datetime": "2015-04-23T04:00:00",
+      "volt": 182.4944,
+      "rotate": 504.4144,
+      "pressure": 108.556,
+      "vibration": 53.4761
+    },
+    {
+      "datetime": "2015-04-23T05:00:00",
+      "volt": 157.1455,
+      "rotate": 468.3044,
+      "pressure": 91.9365,
+      "vibration": 40.1581
+    },
+    {
+      "datetime": "2015-04-23T06:00:00",
+      "volt": 182.4115,
+      "rotate": 435.4687,
+      "pressure": 89.4491,
+      "vibration": 43.6981
+    },
+    {
+      "datetime": "2015-04-23T07:00:00",
+      "volt": 177.0017,
+      "rotate": 386.3824,
+      "pressure": 92.0509,
+      "vibration": 48.261
+    },
+    {
+      "datetime": "2015-04-23T08:00:00",
+      "volt": 159.5206,
+      "rotate": 471.6028,
+      "pressure": 100.9861,
+      "vibration": 52.0126
+    },
+    {
+      "datetime": "2015-04-23T09:00:00",
+      "volt": 160.582,
+      "rotate": 439.3572,
+      "pressure": 94.1274,
+      "vibration": 45.0828
+    },
+    {
+      "datetime": "2015-04-23T10:00:00",
+      "volt": 164.0285,
+      "rotate": 453.282,
+      "pressure": 105.2512,
+      "vibration": 56.0155
+    },
+    {
+      "datetime": "2015-04-23T11:00:00",
+      "volt": 164.6015,
+      "rotate": 420.4656,
+      "pressure": 112.1293,
+      "vibration": 48.6918
+    },
+    {
+      "datetime": "2015-04-23T12:00:00",
+      "volt": 177.8291,
+      "rotate": 433.2156,
+      "pressure": 106.762,
+      "vibration": 54.0214
+    },
+    {
+      "datetime": "2015-04-23T13:00:00",
+      "volt": 169.8816,
+      "rotate": 429.6106,
+      "pressure": 92.9478,
+      "vibration": 59.3584
+    },
+    {
+      "datetime": "2015-04-23T14:00:00",
+      "volt": 172.3816,
+      "rotate": 439.9968,
+      "pressure": 107.5467,
+      "vibration": 56.7567
+    },
+    {
+      "datetime": "2015-04-23T15:00:00",
+      "volt": 155.408,
+      "rotate": 418.504,
+      "pressure": 108.0635,
+      "vibration": 55.472
+    },
+    {
+      "datetime": "2015-04-23T16:00:00",
+      "volt": 175.7691,
+      "rotate": 458.6096,
+      "pressure": 110.4341,
+      "vibration": 55.408
+    },
+    {
+      "datetime": "2015-04-23T17:00:00",
+      "volt": 185.3541,
+      "rotate": 491.6332,
+      "pressure": 98.5537,
+      "vibration": 59.6241
+    },
+    {
+      "datetime": "2015-04-23T18:00:00",
+      "volt": 166.5725,
+      "rotate": 418.3136,
+      "pressure": 96.3706,
+      "vibration": 66.008
+    },
+    {
+      "datetime": "2015-04-23T19:00:00",
+      "volt": 163.7833,
+      "rotate": 419.0024,
+      "pressure": 95.5394,
+      "vibration": 62.0188
+    },
+    {
+      "datetime": "2015-04-23T20:00:00",
+      "volt": 183.2363,
+      "rotate": 476.935,
+      "pressure": 110.8391,
+      "vibration": 55.5753
+    },
+    {
+      "datetime": "2015-04-23T21:00:00",
+      "volt": 167.9487,
+      "rotate": 453.3212,
+      "pressure": 95.6121,
+      "vibration": 58.4041
+    },
+    {
+      "datetime": "2015-04-23T22:00:00",
+      "volt": 166.9195,
+      "rotate": 414.6174,
+      "pressure": 97.555,
+      "vibration": 56.6232
+    },
+    {
+      "datetime": "2015-04-23T23:00:00",
+      "volt": 173.8799,
+      "rotate": 499.1308,
+      "pressure": 104.714,
+      "vibration": 61.218
+    },
+    {
+      "datetime": "2015-04-24T00:00:00",
+      "volt": 160.1502,
+      "rotate": 416.7721,
+      "pressure": 107.1732,
+      "vibration": 55.7359
+    }
+  ],
+  "errors": [
+    {
+      "datetime": "2015-04-23T15:00:00",
+      "errorID": "error4"
+    }
+  ],
+  "last_maint": {
+    "comp1": "2015-04-08T06:00:00",
+    "comp2": "2015-03-16T06:00:00",
+    "comp3": "2015-02-22T06:00:00",
+    "comp4": "2015-04-23T06:00:00"
+  }
+}
