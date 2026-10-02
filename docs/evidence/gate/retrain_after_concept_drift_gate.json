@@ -1,0 +1,69 @@
+{
+  "run_id": "d490d7d0ba8844ceb1957105bb00aaa4",
+  "threshold": 0.29,
+  "passed": true,
+  "checks": [
+    {
+      "name": "recall",
+      "value": 0.9968619246861925,
+      "rule": ">= 0.8",
+      "passed": true
+    },
+    {
+      "name": "precision",
+      "value": 0.9896157840083074,
+      "rule": ">= 0.5",
+      "passed": true
+    },
+    {
+      "name": "p95_latency_ms",
+      "value": 22.129194999979518,
+      "rule": "< 100",
+      "passed": true
+    },
+    {
+      "name": "model_size_mb",
+      "value": 8.40148,
+      "rule": "< 50",
+      "passed": true
+    },
+    {
+      "name": "pr_auc_vs_champion",
+      "value": 0.9997857925488818,
+      "rule": ">= 0.4986",
+      "passed": true
+    }
+  ],
+  "test_metrics": {
+    "pr_auc": 0.9997857925488818,
+    "roc_auc": 0.9999905811534924,
+    "recall": 0.9968619246861925,
+    "precision": 0.9896157840083074,
+    "f1": 0.993225638353309,
+    "tp": 953,
+    "fp": 10,
+    "fn": 3,
+    "tn": 23534,
+    "cost_thb": 200000.0,
+    "saving_vs_no_model_thb": 47600000.0
+  },
+  "latency_ms": {
+    "p50": 18.848250000019107,
+    "p95": 22.129194999979518
+  },
+  "model_size_mb": 8.40148,
+  "champion_version": 1,
+  "champion_test_metrics": {
+    "pr_auc": 0.4985993856879631,
+    "roc_auc": 0.7462903517601513,
+    "recall": 0.4456066945606695,
+    "precision": 0.9551569506726457,
+    "f1": 0.6077032810271041,
+    "tp": 426,
+    "fp": 20,
+    "fn": 530,
+    "tn": 23524,
+    "cost_thb": 26600000.0,
+    "saving_vs_no_model_thb": 21200000.0
+  }
+}

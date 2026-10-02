@@ -1,0 +1,51 @@
+{
+  "run_id": "c2dc07703c004a9c981fb66256a01d35",
+  "threshold": 0.03,
+  "passed": true,
+  "checks": [
+    {
+      "name": "recall",
+      "value": 0.9966442953020134,
+      "rule": ">= 0.8",
+      "passed": true
+    },
+    {
+      "name": "precision",
+      "value": 0.9570354457572503,
+      "rule": ">= 0.5",
+      "passed": true
+    },
+    {
+      "name": "p95_latency_ms",
+      "value": 1.5865349997056908,
+      "rule": "< 100",
+      "passed": true
+    },
+    {
+      "name": "model_size_mb",
+      "value": 0.541059,
+      "rule": "< 50",
+      "passed": true
+    }
+  ],
+  "test_metrics": {
+    "pr_auc": 0.9988959445431153,
+    "roc_auc": 0.9999764480198284,
+    "recall": 0.9966442953020134,
+    "precision": 0.9570354457572503,
+    "f1": 0.9764383561643836,
+    "tp": 891,
+    "fp": 40,
+    "fn": 3,
+    "tn": 48166,
+    "cost_thb": 350000.0,
+    "saving_vs_no_model_thb": 44350000.0
+  },
+  "latency_ms": {
+    "p50": 1.3909000001604,
+    "p95": 1.5865349997056908
+  },
+  "model_size_mb": 0.541059,
+  "champion_version": null,
+  "champion_test_metrics": null
+}
