@@ -1,0 +1,24 @@
+{
+  "requests": 2000,
+  "concurrency": 4,
+  "wall_seconds": 12.72,
+  "throughput_rps": 157.2,
+  "p50_ms": 24.61,
+  "p95_ms": 30.03,
+  "p99_ms": 36.07,
+  "error_rate": 0.0,
+  "client_errors_4xx": 0,
+  "slo": {
+    "p95_latency_ms": {
+      "target": 100,
+      "actual": 30.03,
+      "met": true
+    },
+    "error_rate": {
+      "target": 0.01,
+      "actual": 0.0,
+      "met": true
+    }
+  },
+  "slo_met": true
+}
