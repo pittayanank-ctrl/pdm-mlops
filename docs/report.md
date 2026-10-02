@@ -326,9 +326,15 @@ Prefect DAG `pdm-training-pipeline`:
 - ดูประวัติการรันใน Prefect UI ได้
 - DAG `pdm-retrain-on-drift` ปิดวงจร monitoring → เทรนใหม่
 
-**Git:** branch protection บน `main`, ทุกงานผ่าน Pull Request + review 1 คน + CI ผ่าน รวม 24 PR แบ่งตามเจ้าของงาน (ดู `docs/team/README.md`)
+**Git:** ruleset ของ `main` บังคับให้ทุกงานผ่าน Pull Request, approve 1 คน และ status checks ครบ 4 ตัว (code-quality, data-validation, model-quality, docker-build) รวม 24 PR แบ่งตามเจ้าของงาน (ดู `docs/team/README.md`)
 
-[ภาพ: หน้า Pull requests และ Insights → Contributors]
+![Prefect flow run สำเร็จทุก task](evidence/screenshots/prefect_success.png)
+
+![ruleset ของ main](evidence/screenshots/ruleset.png)
+
+![Pull requests ที่ merge แล้ว](evidence/screenshots/pull_requests.png)
+
+![Contributors](evidence/screenshots/contributors.png)
 
 ## 12. สถาปัตยกรรม
 
