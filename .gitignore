@@ -5,7 +5,8 @@ __pycache__/
 .ruff_cache/
 
 # generated - reproducible from code + config
-data/
+/data/
+.egg-info/
 logs/
 reports/
 mlruns/
