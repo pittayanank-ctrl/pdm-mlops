@@ -41,8 +41,8 @@
 | สมาชิก | เครื่องมือ AI | ใช้ช่วยส่วนไหน | สิ่งที่ตรวจสอบหรือแก้เอง |
 |---|---|---|---|
 | คนที่ 1 | | | |
-| คนที่ 2 | | | |
-| คนที่ 3 | | | |
+| คนที่ 2 | Claude | โค้ดใน PR02, PR05 มาจากไฟล์ handoff ของทีม และใช้ Claude ช่วยอธิบายขั้นตอน git/PR, แก้ปัญหา .gitignore และ No module named 'pdm' | อ่านโค้ด ingest/labels/split/versioning, รัน pytest/ruff, รัน ingest แบบข้อมูลจำลอง และรัน pipeline บนข้อมูลจริง 2 ครั้งเพื่อยืนยันว่า data_version ตรงกัน |
+| คนที่ 3 | Claude | เขียนโค้ดทั้งหมดใน PR09, PR10, PR14 (features/, modeling/, test_features.py, test_skew.py), ร่างข้อความ PR และข้อความในรายงานหัวข้อ 6, อธิบายขั้นตอน git/PR | อ่านและอธิบายโค้ดได้ทุกฟังก์ชัน, รัน pytest/ruff, รันเทรนบนข้อมูลตัวอย่างและข้อมูลจริงเอง (ผลใน PR25 มาจากการรันของผม), ถ่ายภาพ MLflow compare, ตรวจตัวเลขในรายงานกับผลรันจริง |
 | คนที่ 4 | Claude | โค้ดใน PR03, PR04, PR07 (schema/validate, cleaning, bad_data, test_validation) และช่วยอธิบายขั้นตอน git/PR, เขียนคำอธิบาย PR | อ่านและอธิบายโค้ดได้, รัน pytest/ruff, รัน bad_data และ validate เองกับข้อมูลเสียทุกเคส, ตรวจรายงานผล validation (PR26) |
 | คนที่ 5 | | | |
 | คนที่ 6 | | | |
