@@ -179,7 +179,11 @@ Schema เขียนด้วย Pandera (`src/pdm/validation/schema.py`) ต�
 
 error ก่อนหน้าเป็นสัญญาณหลัก ส่วนเซนเซอร์ช่วยระบุว่าชิ้นส่วนไหนจะเสีย
 
-[ภาพ: PR curve ของ 4 โมเดล จาก `docs/evidence/experiments/*/pr_curve.png`]
+![MLflow compare runs](evidence/screenshots/mlflow_compare.png)
+
+| Rule baseline | Logistic Regression | Random Forest | XGBoost |
+|---|---|---|---|
+| ![](evidence/experiments/rule_baseline/pr_curve.png) | ![](evidence/experiments/logreg/pr_curve.png) | ![](evidence/experiments/random_forest/pr_curve.png) | ![](evidence/experiments/xgboost/pr_curve.png) |
 
 ## 7. Experiment Tracking และ Model Registry
 
