@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  PYTHONPATH: src
+  PDM_CONFIG: configs/params.ci.yaml   # small synthetic dataset, same schema as the real one
+
+jobs:
+  # 1) code quality: lint, formatting, unit tests
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements-dev.txt -c requirements.lock
+      - name: Lint
+        run: ruff check src tests
+      - name: Format
+        run: ruff format --check src tests
+      - name: Unit tests
+        run: pytest
+
+  # 2) data correctness: clean data must pass, every kind of broken data must be rejected
+  data-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt -c requirements.lock
+      - name: Generate data
+        run: python -m pdm.data.ingest
+      - name: Clean data passes the schema
+        run: python -m pdm.validation.validate
+      - name: Broken data is rejected
+        run: |
+          python -m pdm.validation.bad_data
+          for case in data/bad/*; do
+            if python -m pdm.validation.validate --raw-dir "$case"; then
+              echo "::error::$case was NOT rejected"; exit 1
+            fi
+            echo "OK: $case rejected"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: validation-reports, path: reports/validation}
