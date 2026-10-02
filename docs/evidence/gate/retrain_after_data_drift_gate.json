@@ -1,0 +1,69 @@
+{
+  "run_id": "a8e01fb8ae5047bd9f47ea6e7e410ed6",
+  "threshold": 0.81,
+  "passed": true,
+  "checks": [
+    {
+      "name": "recall",
+      "value": 1.0,
+      "rule": ">= 0.8",
+      "passed": true
+    },
+    {
+      "name": "precision",
+      "value": 0.9930394431554525,
+      "rule": ">= 0.5",
+      "passed": true
+    },
+    {
+      "name": "p95_latency_ms",
+      "value": 1.6002750003281108,
+      "rule": "< 100",
+      "passed": true
+    },
+    {
+      "name": "model_size_mb",
+      "value": 0.607307,
+      "rule": "< 50",
+      "passed": true
+    },
+    {
+      "name": "pr_auc_vs_champion",
+      "value": 0.9999999999999999,
+      "rule": ">= 0.9818",
+      "passed": true
+    }
+  ],
+  "test_metrics": {
+    "pr_auc": 0.9999999999999999,
+    "roc_auc": 0.9999999999999999,
+    "recall": 1.0,
+    "precision": 0.9930394431554525,
+    "f1": 0.9965075669383003,
+    "tp": 428,
+    "fp": 3,
+    "fn": 0,
+    "tn": 24069,
+    "cost_thb": 15000.0,
+    "saving_vs_no_model_thb": 21385000.0
+  },
+  "latency_ms": {
+    "p50": 1.1687500000334694,
+    "p95": 1.6002750003281108
+  },
+  "model_size_mb": 0.607307,
+  "champion_version": 1,
+  "champion_test_metrics": {
+    "pr_auc": 0.9818127474864937,
+    "roc_auc": 0.9997027997005866,
+    "recall": 1.0,
+    "precision": 0.4869169510807736,
+    "f1": 0.6549349655700076,
+    "tp": 428,
+    "fp": 451,
+    "fn": 0,
+    "tn": 23621,
+    "cost_thb": 2255000.0,
+    "saving_vs_no_model_thb": 19145000.0
+  }
+}
