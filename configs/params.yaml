@@ -69,7 +69,7 @@ experiments:                         # run in this order; best val PR-AUC become
     params: {n_estimators: 300, max_depth: 5, learning_rate: 0.05, subsample: 0.8, colsample_bytree: 0.8}
 
 gate:                                # must pass ALL to be promoted
-  min_recall: 0.80
+  min_recall: 0.999
   min_precision: 0.50
   max_p95_latency_ms: 100
   max_model_size_mb: 50
