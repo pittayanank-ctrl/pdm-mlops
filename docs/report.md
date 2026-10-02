@@ -210,7 +210,9 @@ alias `champion` ชี้ไปเวอร์ชันที่ API ใช้�
 
 **สาธิต rollback:** สั่ง `make rollback` ย้าย alias กลับเวอร์ชันก่อนหน้า ตั้ง status ให้ทั้ง 2 เวอร์ชัน แล้วแจ้ง API ให้ reload ระบบไม่ต้อง build หรือ deploy ใหม่
 
-[ภาพ: MLflow compare runs, หน้า registry ที่มี champion / archived / rolled_back]
+![MLflow compare runs](evidence/screenshots/mlflow_compare.png)
+![Model registry: alias champion และสถานะแต่ละเวอร์ชัน](evidence/screenshots/mlflow_registry.png)
+![rollback ด้วยคำสั่งเดียว](evidence/screenshots/registry_list.png)
 
 ## 8. การให้บริการและโครงสร้างพื้นฐาน
 
