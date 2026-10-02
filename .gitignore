@@ -6,7 +6,7 @@ __pycache__/
 
 # generated - reproducible from code + config
 /data/
-.egg-info/
+*.egg-info/
 logs/
 reports/
 mlruns/
