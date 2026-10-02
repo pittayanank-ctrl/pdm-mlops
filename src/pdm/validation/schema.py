@@ -14,7 +14,7 @@ HARD_BOUNDS = {  # physically impossible outside these -> reject
     "volt": (50.0, 300.0),
     "rotate": (0.0, 1000.0),
     "pressure": (0.0, 300.0),
-    "vibration": (0.0, 150.0),
+    "vibration": (0.0, 20.0),
 }
 MACHINE_ID_RANGE = (1, 100)
 MODELS = ["model1", "model2", "model3", "model4"]
