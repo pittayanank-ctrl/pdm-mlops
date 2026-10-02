@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# generated - reproducible from code + config
+data/
+logs/
+reports/
+mlruns/
+mlflow.db
+*.part
+
+# keep evidence screenshots/logs for the report
+!docs/evidence/
