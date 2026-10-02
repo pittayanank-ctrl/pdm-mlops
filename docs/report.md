@@ -282,7 +282,9 @@ alias `champion` ชี้ไปเวอร์ชันที่ API ใช้�
 | Concept drift | input เดิม แต่เกิด failure mode ใหม่ใน model1/2 เมื่อความดันแกว่งสูง | drift 0%, recall ตกเหลือ 0.449 → concept_drift | PR-AUC 1.000 เทียบกับ 0.499 → promote (รอบนี้ Random Forest ชนะ ระบบจึงเลือก RF โดยอัตโนมัติ: 8.4 MB, p95 22 ms ยังผ่าน gate) |
 | Data drift ผ่าน API จริง | ส่ง request ที่ drift 300 ครั้ง แล้ว `make monitor-live` | drift 41% → data_drift + alert | ตามนโยบาย |
 
-[ภาพ: Grafana dashboard, Prometheus alerts, `concept_drift.html`]
+![Grafana dashboard](evidence/screenshots/grafana.png)
+![Prometheus alerts](evidence/screenshots/prometheus_alerts.png)
+![รายงาน concept drift](evidence/screenshots/concept_drift_report.png)
 
 ## 10. CI/CD
 
