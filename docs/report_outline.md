@@ -45,6 +45,6 @@
 | คนที่ 3 | Claude | เขียนโค้ดทั้งหมดใน PR09, PR10, PR14 (features/, modeling/, test_features.py, test_skew.py), ร่างข้อความ PR และข้อความในรายงานหัวข้อ 6, อธิบายขั้นตอน git/PR | อ่านและอธิบายโค้ดได้ทุกฟังก์ชัน, รัน pytest/ruff, รันเทรนบนข้อมูลตัวอย่างและข้อมูลจริงเอง (ผลใน PR25 มาจากการรันของผม), ถ่ายภาพ MLflow compare, ตรวจตัวเลขในรายงานกับผลรันจริง |
 | คนที่ 4 | Claude | โค้ดใน PR03, PR04, PR07 (schema/validate, cleaning, bad_data, test_validation) และช่วยอธิบายขั้นตอน git/PR, เขียนคำอธิบาย PR | อ่านและอธิบายโค้ดได้, รัน pytest/ruff, รัน bad_data และ validate เองกับข้อมูลเสียทุกเคส, ตรวจรายงานผล validation (PR26) |
 | คนที่ 5 | Claude | ส่วนที่ AI ช่วย เช่น ร่างโค้ด PR11/PR27, เขียน PR description, อธิบายขั้นตอน git | อ่านโค้ด, รัน pytest/ruff, รัน demo registry เอง
-| คนที่ 6 | | | |
+| คนที่ 6 | Claude / AI | โค้ดส่วน Serving ใน PR13, PR15, PR19 มาจากไฟล์ handoff, ใช้ AI ช่วยสรุปผลลัพธ์จากเทอร์มินัล ร่าง PR description (PR19, PR28) และอธิบายการใช้คำสั่ง Git | อ่านและอธิบายโค้ดส่วน API, Batch scoring และ Load test ได้, รัน pytest/ruff, ทดสอบยิง API (200, 422) ผ่าน Swagger ด้วยตัวเอง, รันสคริปต์วัดผลและแคปภาพหลักฐาน |	
 | คนที่ 7 | Gemini | ช่วยตอนแคปภาพ Grafana, Prometheus, Evidently report การ commit, push | ลำดับคำสั่ง Git และตรวจสอบความถูกต้องของไฟล์รูปภาพ |
 | คนที่ 8 | Claude | ช่วยร่างคำอธิบาย PR (PR08, PR22, PR23), อธิบายขั้นตอน git/CI และช่วยแก้ปัญหาติดตั้ง Python/venv | อ่าน ci.yml ทุก job, รัน pytest/ruff เอง, ถ่ายภาพ CI ทั้งตอนเขียวและแดงเอง, ตรวจว่า README ตรงกับ Makefile |
