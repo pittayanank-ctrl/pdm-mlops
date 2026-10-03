@@ -221,6 +221,8 @@ alias `champion` ชี้ไปเวอร์ชันที่ API ใช้�
 - ตรวจ input ด้วย Pydantic
 - ข้อมูลผิดได้ 422 พร้อมบอก field ที่ผิด
 - ทดสอบ input ผิด 8 แบบใน `tests/test_api.py`
+![predict ได้ 200](evidence/screenshots/swagger_200.png)
+![ข้อมูลผิดได้ 422](evidence/screenshots/swagger_422.png)
 
 **รูปแบบการให้บริการ:**
 
